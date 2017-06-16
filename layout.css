@@ -43,23 +43,7 @@ a {
 	vertical-align: middle;
 	margin-left: 30px;
 }
-.inner_menu {
-	z-index: 1;
-	position: relative;
-	margin-top: 10px;
-	border-radius: 7px;
-	box-shadow: 0px 2px 6px rgba(100, 100, 100, 0.3);
-	text-decoration: none;
-	font-size: 15px;
-	color: gray;
-	height: 150px;
-}
-.inner_menu2{
-	overflow-y: scroll;
-}
-.w3-bar-block .w3-bar-item{
-	text-align:center;
-}
+
 #main_nav_member{
 	margin-top: 35px;
 	vertical-align: middle;
@@ -76,29 +60,21 @@ a {
 /* 백종민 추가부분 끝 */
 
 /*상단 이미지 구성하는 부분*/
-#main_header_student_hall {
+#main_header {
 	position: relative;
 	height: 560px;
+	background-size: 100% 560px;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+}
+.student_hall_image {
 	background-image: url('student_hall.jpg');
-	background-size: 100% 560px;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
 }
-#main_header_woojungdang {
-	position: relative;
-	height: 560px;
+.woojungdang_image {
 	background-image: url('우정당배경.jpg');
-	background-size: 100% 560px;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
 }
-#main_header_jingwan_hall {
-	position: relative;
-	height: 560px;
-	background-image: url('진관홀배경.jpg');
-	background-size: 100% 560px;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
+.jingwanhall_image {
+	background-image: url('진관홀배경.jpg');	
 }
 /*상단 구성중 타이틀(학생회관) 텍스트 부분*/
 #main_text_title {
@@ -136,7 +112,22 @@ a {
 
 /* 중단부 container CSS */
 #main_container {
-	width: 91.66%; height: 1200px;
+/*	width: 91.66%; height: 1200px;
+	margin: 0 auto;
+	background-origin: white;*/
+}
+.student_hall_main_container {
+	width: 91.66%; height: 1000px;
+	margin: 0 auto;
+	background-origin: white;
+}
+.jingwan_hall_main_container {
+	width: 91.66%; height: 400px;
+	margin: 0 auto;
+	background-origin: white;
+}
+.woojungdang_main_container {
+	width: 91.66%; height: 400px;
 	margin: 0 auto;
 	background-origin: white;
 }

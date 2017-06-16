@@ -6,38 +6,42 @@
 	<link rel="stylesheet" type="text/css" href="layout.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-3.2.1.js"
+	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	crossorigin="anonymous">
+	</script>
+	<style type="text/css">
+	/* 왜 이 스타일클래스만 옮기면 border-radius CSS가 적용안되는지 모르겠어요 ㅠㅠ*/
+		.w3-button{
+			padding: 0;
+			border-radius: 15px;
+			float: right;
+			margin-right: 10px;
+		}
+
+		.w3-bar-block .w3-bar-item{
+			text-align:center;
+		}
+
+		.inner_menu {
+			z-index: 1;
+			position: relative;
+			margin-top: 10px;
+			border-radius: 7px;
+			box-shadow: 0px 2px 6px rgba(100, 100, 100, 0.3);
+			text-decoration: none;
+			font-size: 15px;
+			color: gray;
+			height: 190px;
+		}
+		.inner_menu2{
+			overflow-y: scroll;
+		}
+	</style>
 </head>
-<style type="text/css">
-/* 왜 이 스타일클래스만 옮기면 border-radius CSS가 적용안되는지 모르겠어요 ㅠㅠ*/
-	.w3-button{
-		padding: 0;
-		border-radius: 15px;
-		float: right;
-		margin-right: 10px;
-	}
-
-	.w3-bar-block .w3-bar-item{
-		text-align:center;
-	}
-
-	.inner_menu {
-		z-index: 1;
-		position: relative;
-		margin-top: 10px;
-		border-radius: 7px;
-		box-shadow: 0px 2px 6px rgba(100, 100, 100, 0.3);
-		text-decoration: none;
-		font-size: 15px;
-		color: gray;
-		height: 150px;
-	}
-	.inner_menu2{
-		overflow-y: scroll;
-	}
-</style>
 <body>
 	<div id="page_wrapper">
-		<div id="main_header_student_hall">
+		<div id="main_header" class="student_hall_image">
 			<div id="main_nav">
 	  		<a id="main_nav_logo" href="main.html">
 	  			<img src="logo_white.png" width="128px" height="60px"/>
@@ -47,6 +51,7 @@
 	  				<span class="search_bar_text">학생회관</span>
 	  				<button onclick="myFunction()" class="w3-button"><img class="image_down_arrow" src="down-arrow.png" /></button>
 	  				<div id="Area" class="w3-dropdown-content inner_menu w3-bar-block">
+	  					<a href="student_hall.html" class="w3-bar-item w3-button">학생회관</a>
 	  					<a href="jingwan_hall.html" class="w3-bar-item w3-button">진관홀</a>
 	  					<a href="woojungdang.html" class="w3-bar-item w3-button">우정당</a>
 	  					<a href="#" class="w3-bar-item w3-button">광개토관, 찬</a>
@@ -117,7 +122,7 @@
 			<div id="main_text_content"><span>세종대학교에서 메뉴가 가장 많고 맛있는 메인 학생식당 입니다 !</span></div>
 		</div>
 
-		<div id="main_container">
+		<div id="main_container" class="student_hall_main_container">
 			<div id="main_card_div">
 				<div class="card">
 					<div id="main_card_image_div">
