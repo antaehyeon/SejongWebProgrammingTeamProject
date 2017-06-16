@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SUF : Sejong University Food</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="http://code.jquery.com/jquery-3.2.1.js" 
+	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" 
+	crossorigin="anonymous">
+	</script>
+</head>
+<style>
+	body {
+
+	}
+</style>
+<body>
+	<!-- wrap -->
+	<div id="page_wrapper">
+		<!-- header -->
+		<div id="main-header">
+			<nav id="navigation">
+				<div id="nav_container">
+					<a id="nav_logo" href="main.html">
+						<img id="logo" src="logo.png" width="128px" height="60px">
+					</a>
+					<div id="connect">
+						<a href="login.html"><span>로그인</span></a>
+						<span> | </span>
+						<a href="join.html"><span>회원가입</span></a>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		<div id=main_container>
+			<div id=banner>
+				<p>학식을 먹는 즐거움</p>
+				<p>세종대학교 학식 가이드, SUF</p>
+			</div>
+			<div id=search_bar>
+				<img id="image_location" src="location-pin.png"></img>
+				<span id="search_bar_text">세종대 식당을 찾아보세요!</span>
+				<a id="down_arrow" href="#"><img id="image_down_arrow" src="down-arrow.png" /></a>
+				<ul id="inner_menu" class="hide">
+					<li class="inner_menu_shadow"><a href="student_hall.html">학생회관</a></li>
+					<li class="inner_menu_shadow"><a href="jingwan_hall.html">진관홀</a></li>
+					<li class="inner_menu_shadow"><a href="woojungdang.html">우정당</a></li>
+					<li class="inner_menu_shadow"><a href="#">광개토관, 찬</a></li>
+					<li class="inner_menu_shadow"><a href="#">군자관</a></li>
+				</ul>
+
+				<script type="text/javascript">
+					$(".inner_menu_shadow").hover(function () {
+						$(this).toggleClass('classWithShadowUl');
+					});
+				</script>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$("#down_arrow").click(function () {
+					$(this).next("ul").toggleClass("hide");
+				});
+			});
+		</script>
+
+		<div id=low_container>
+			<div id="low_banner">
+				<p>음식으로 인한 즐거움</p>
+				<p>지금부터 시작하세요 :)</p>
+			</div>
+
+			<div id="low_card">
+				<div id="div_student_hall" class="image_box">
+					<a href="student_hall.html">
+						<img class="main_card" src="seoul.png" />
+					</a>
+					<div id="div_student_hall_text" class="card_text_layout">
+						<p>학생회관</p>
+						<hr />
+						<p>SEJONG UNIVERSITY</p>
+					</div>
+				</div>
+				<div id="div_jingwan_hall" class="image_box">
+					<a href="jingwan_hall.html">
+						<img class="main_card" src="jingwanHall.png" width="300px" height="300px" />
+					</a>
+					<div class="card_text_layout">
+						<p>진관홀</p>
+						<hr />
+						<p>SEJONG UNIVERSITY</p>
+					</div>
+				</div>
+				<div id="div_woojung_hall" class="image_box">
+					<a href="woojungdang.html">
+						<img class="main_card" src="woojungdang.png" width="300px" height="300px" />
+					</a>
+					<div class="card_text_layout">
+						<p>우정당</p>
+						<hr />
+						<p>SEJONG UNIVERSITY</p>
+					</div>
+				</div>
+				<script type="text/javascript">
+					$("#div_student_hall").hover(function () {
+						$(this).toggleClass('classWithShadow');
+					});
+					$("#div_jingwan_hall").hover(function () {
+						$(this).toggleClass('classWithShadow');
+					});
+					$("#div_woojung_hall").hover(function () {
+						$(this).toggleClass('classWithShadow');
+					});
+				</script>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div id="footer">
+			<div id="footer_container">
+				<a id="footer_logo" href="main.html">
+					<img src="logo_white.png" width="128px" height="60px">
+				</a>
+				<div id="footer_text">
+					<p>세종대의 학식을 하나부터 열까지.</p>
+					<p>맛있게 먹어보자, Sejong University Food</p>
+					<p>&nbsp;</p>
+					<p> Made by. 웹프로그래밍 팀프로젝트</p>
+					<p>백종민 안태현 이혜민 이현제</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

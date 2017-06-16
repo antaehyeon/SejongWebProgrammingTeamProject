@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link type ="text/css"rel="stylesheet" href="join.css">
+    <title>SUF : 회원가입</title>
+  </head>
+
+  <body>
+    <div id="page_wrapper">
+      <div id="header"> 
+        <p>회 원 가 입</p>     
+      </div>
+
+      <div id="main_container">
+        <div id="container_logo">
+          <a id="logo" href="main.html">
+            <img src="logo.png" width="128px" height="60px">
+          </a>
+        </div>
+        <div id="container_text">
+          <p>세종대학교 학식 안내사이트에 오신것을 환영합니다 !</p>
+          <p>회원가입을 위한 정보를 입력해주세요 :)</p>
+        </div>
+        <p>&nbsp;</p>
+
+        <div id="container_form">        
+          <form>
+            <hr />
+            <p>&nbsp;</p>
+            <label for="email">
+              <input id="email" type="email" name="email" placeholder="이메일">
+            </label>
+            <p>&nbsp;</p>
+            <label for="password">
+              <input id="password" type="password" name="password" placeholder="비밀번호">
+            </label>
+            <p>&nbsp;</p>
+            <label for="password">
+              <input id="password" type="password" name="password" placeholder="비밀번호 확인">
+            </label>
+            <p>&nbsp;</p>
+            <label for="name">
+              <input id="name" type="name" name="name" placeholder="이름">
+            </label>
+            <p>&nbsp;</p>
+            <label for="class_no">
+              <input id="class_no" type="classNo" name="classNo" placeholder="학번">
+            </label>
+            <p>&nbsp;</p>
+            <label for="phone_number">
+              <select id="phone_number_first" type="phone_number" name="first" placeholder="010">
+                <option>010</option>
+                <option>011</option>
+                <option>016</option>
+                <option>017</option>
+                <option>019</option>
+              </select>
+              <input id="phone_number_second" type="phone_number" name="second" placeholder="1234">
+              <input id="phone_number_third" type="phone_number" name="third" placeholder="4321">
+            </label>
+            <p>&nbsp;</p>
+            <hr />
+          </form>        
+        </div>
+        <p>&nbsp;</p>
+        <div id="low_container">
+          <div id="agree">
+            <input type="checkbox" name="">
+            <span>이용약관 동의</span>
+            <button>자세히 보기</button>
+          </div>
+          <div id="agree">
+            <input type="checkbox" name="">
+            <span>개인정보 취급 동의</span>
+            <button>자세히 보기</button>
+          </div>
+          <p>&nbsp;</p>
+          <hr />
+        </div>
+
+        <div id="confirm_container">
+          <p>&nbsp;</p>
+          <button id="button_join" onclick="alert('회원가입이 완료되었습니다')";>회원가입</button>
+          <p>&nbsp;</p>
+          <a href="main.html"><button id="button_back">뒤로가기</button></a>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+      <div id="footer_container">
+        <a id="footer_logo" href="main.html">
+          <img src="logo_white.png" width="128px" height="60px">
+        </a>
+        <div id="footer_text">
+          <p>세종대의 학식을 하나부터 열까지.</p>
+          <p>맛있게 먹어보자, Sejong University Food</p>
+          <p>&nbsp;</p>
+          <p> Made by. 웹프로그래밍 팀프로젝트</p>
+          <p>백종민 안태현 이혜민 이현제</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

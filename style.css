@@ -1,0 +1,250 @@
+/* 초기화 */
+* {
+	margin: 0; padding: 0;
+	font-family: '나눔 고딕', 'NanumGothic', 'NanumBarunGothic', Gothic, sans-serif;
+}
+
+body {
+	background-image: url('main_image.jpg');
+	background-size: 100% 560px;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+
+	margin: 0 auto;
+}
+
+#nav_container {
+	width: 1024px; height: 50px;
+	margin: 10px auto;
+
+}
+
+#nav_logo {
+	float: left;
+	margin-left: 40px;
+}
+
+#connect {
+	float: right;
+	margin-top: 15px;
+	margin-right: 40px;
+}
+
+#connect > a {
+	text-decoration: none;
+	color: white;
+}
+
+#connect > span {
+	color: white;
+}
+
+#main_container {
+	z-index: 2;
+	padding-top: 180px;
+	padding-bottom: 90px;
+}
+
+#banner {
+	width: 350px;
+	margin: 0 auto;
+	padding-bottom: 80px;
+}
+
+#banner > p {
+	text-align: center;
+	font-size: 26px;
+	color: white;
+}
+
+#search_bar {
+	width: 350px; height: 40px;
+	margin: 0 auto;
+
+	background-color: #FFFFFF;
+	/* 선을 설정합니다 (두께, 형식, 색상) */
+	border: 1px solid #CCCCCC;
+	border-radius: 15px 15px 15px 15px;
+
+	background-color: white;
+
+	line-height: 40px;
+}
+
+
+#image_location {
+	background-image: url('location-pin.png');
+	width: 28px; height: 28px;
+
+	vertical-align: middle;
+	margin-right: 30px;
+	margin-left: 10px;
+}
+
+#search_bar_text {
+	color: #969696;
+	vertical-align: middle;
+}
+
+#image_down_arrow {
+	background-image: url('down-arrow.png');
+	width: 28px; height: 28px;
+	
+	vertical-align: middle;
+
+	margin-left: 50px;
+}
+
+
+
+#low_container {
+	z-index: 1;
+	width: 1024px; height: 600px;
+	margin: 0 auto;
+}
+
+#low_banner {
+	padding-top: 90px;
+	padding-bottom: 20px;
+	text-align: center;
+	font-size: 20px;
+}
+
+#low_banner > p:nth-child(1) {
+	font-weight: bold;
+	font-size: 22px;
+}
+
+#low_banner > p:nth-child(2) {
+	margin-top: 5px;
+	font-size: 16px;
+}
+
+#low_card {
+	padding-top: 30px;
+	padding-left: 45px;
+}
+
+#low_card > div {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#div_student_hall {
+	position: relative;
+}
+
+#div_jingwan_hall {
+	position: relative;
+}
+
+#div_woojung_hall {
+	position: relative;
+}
+
+.card_text_layout {
+	position: absolute;
+	width: 300px; height: 10px;
+	top: 100px;
+	color: #FFFFFF;
+}
+
+.card_text_layout > p {
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.card_text_layout > hr {
+	margin: 20px auto;
+	width: 30px;
+}
+
+
+.main_card {
+	width: 300px; height: 300px;
+	border: 1px solid #CCCCCC;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 0px 4px 6px rgba(100, 100, 100, 0.3);	
+}
+
+#div_card_text {
+	width: 100%; height: 100%;
+}
+
+#inner_menu {
+	position: relative;
+	margin-top: 10px;
+	padding-top: 10px;
+	background-color: white;
+	text-align: center;
+
+	list-style: none;
+	text-decoration: none;
+
+	border-radius: 7px 7px 15px 15px;
+	box-shadow: 0px 2px 6px rgba(100, 100, 100, 0.3);
+}
+
+#inner_menu > li > a {
+	text-decoration: none;
+	font-size: 18px;
+	color: gray;
+}
+
+.hide {
+	display: none;
+}
+
+
+
+#footer {
+	width: 100%; height: 200px;
+	background-color: #373737;
+}
+
+#footer_container {
+	padding-top: 30px;
+	width: 100%; height: 60px;
+}
+
+#footer_logo {
+	margin-left: 30px;
+}
+
+#footer_text {
+	width: 100%; height: 50px;
+}
+
+#footer_text > p {
+	margin-left: 40px;
+	font-size: 16px;
+	color: white;
+}
+
+#footer_text > p:nth-child(4) {
+	font-size: 12px;
+	color: #6a6a6a;
+}
+
+#footer_text > p:nth-child(5) {
+	font-size: 12px;	
+	color: #6a6a6a;
+}
+
+
+
+
+.classWithShadow {
+	-moz-box-shadow: 3px 3px 10px #000;
+	-webkit-box-shadow: 3px 3px 10px #000;
+	box-shadow: 3px 3px 10px #000;
+	border-radius: 15px 15px 15px 15px;
+	height: 300px;
+}
+
+.classWithShadowUl {
+ 	-moz-box-shadow: 3px 3px 10px #000;
+	-webkit-box-shadow: 3px 3px 10px #000;
+	box-shadow: 3px 3px 10px #000;
+}

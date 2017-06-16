@@ -1,0 +1,439 @@
+* {
+	margin: 0; padding: 0;
+	font-family: '나눔 고딕', 'NanumGothic', 'NanumBarunGothic', Gothic, sans-serif;
+}
+
+
+/* ********************************************************************* */
+
+#page_wrapper {
+	background-color: #F4F4F4;
+}
+
+/* 메인 헤더 부분 */
+#main_header_div {
+	position: relative;
+	height: 560px;
+	background: url(food_information_background.jpg);
+}
+
+#main_information_div {
+	width: 1300px;
+	font-size: 0;
+	margin: 0 auto;
+}
+
+#main_map_div {
+	float: left;
+	display: inline-block;
+	width: 500px; height: 500px;
+	margin: 30px 0;
+
+	background: url('map.png');
+}
+
+#main_introduce_div {
+	display: inline-block;
+	width: 800px; height: 500px;
+	margin: 30px 0;
+}
+
+#main_introduce_text_div {
+	font-size: 16px;
+	width: 750px; height: 300px;
+	margin: 20px auto;
+}
+
+#main_introduce_text_div > hr {
+	margin: 2px;
+}
+
+/* 학식소개 페이지 중 제목 + 해시태그 부분 */
+#title {
+	width: 750px; height: 40px;
+}
+#title_food_name {
+	position: relative;
+	float: left;
+	width: 200px; height: 40px;
+	display: inline;
+}
+#title_food_name > p {
+	position: absolute;
+	bottom: 0; left: 0;
+	font-size: 20px;
+	color: white;
+	font-weight: bold;
+}
+#title_hash_tag {
+	position: relative;
+	float: left;
+	width: 550px; height: 40px;
+	display: inline;
+}
+#title_hash_tag > p {
+	position: absolute;
+	bottom: 0; left: 0;
+	font-size: 14px;
+	color: white;
+}
+
+/* 내용 설명하는 부분 TITLE 공통 CLASS*/
+.main_container_title_parent {
+	width: 750px; height: 40px;
+}
+.main_container_title_div {
+	position: relative;
+	float: left;
+	width: 200px; height: 40px;
+	display: inline
+}
+.main_container_title_p {
+	position: absolute;
+	left: 0; bottom: 0;
+	color: white;
+	font-weight: bold;
+}
+.main_container_content_div {
+	position: relative;
+	float: left;
+	width: 550px; height: 40px;
+	display: inline;
+}
+.main_container_content_p {
+	position: absolute;
+	left: 0; bottom: 0;
+	color: white;
+	font-weight: bold;
+}
+
+/* 음식 카드 부분 */
+#main_introduce_image_div {
+	width: 750px; height: 160px;
+	margin: 0 auto;
+}
+
+.main_introduce_image_card_div {
+	display: inline-block;
+	margin-left: 30px;
+	margin-top: 10px;
+	width: 150px; height: 150px;
+	border: 1px solid #CCCCCC;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 0px 2px 6px black;
+}
+.main_introduce_image_card_div > img {
+	width: 150px; height: 150px;
+	border: 1px solid #CCCCCC;
+	border-radius: 15px 15px 15px 15px;
+}
+
+/* 평점 부분 (별 그리는 부분) */
+.star_rating {
+	position: absolute;
+	left: 0; bottom: 0;
+	font-size:0; letter-spacing:-4px;
+}
+.star_rating a {
+    font-size:22px;
+    letter-spacing:0;
+    display:inline-block;
+    margin-left:5px;
+    color: white;
+    text-decoration:none;
+}
+.star_rating a:first-child {margin-left:0;}
+.star_rating a.on {color: #D50000;}
+
+#main_container_rating_text_p {
+	position: absolute;
+	width: 100px; height: 24px;
+	left: 140px; bottom: 5px;
+
+	font-size: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+
+/* ********************************************************************* */
+
+
+/* 메인 콘텐츠 부분 */
+#main_container {
+	height: 1100px;
+}
+#main_container_board_div {
+	width: 980px; height: 600px;
+	margin: 0 auto;
+}
+
+/* 백종민 PART */
+
+#review_box{
+	width: 980px; height: 305px;
+	margin: 0px auto;
+	margin-top: 20px;
+	border-top: 2px solid #c5013e;
+	background-color: white;
+
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 2px 2px 6px #616161;
+}
+
+.review_title{ /* 리뷰 작성 */
+	padding-top: 20px;
+	padding-left: 30px;
+
+    font-weight: bold;
+    color: black;
+}
+.review_title2{ /* 평점 */
+    display: inline-block;
+    width: 150px;
+
+    color: black;
+    padding-left: 30px;
+}
+#review_score {
+	width: 980px; height: 44px;
+	position: relative;
+
+}
+
+.review_star_rating {
+	position: absolute;
+	left: 150px; bottom: 8px;
+	font-size:0; letter-spacing:-4px;
+}
+.review_star_rating a {
+    font-size:22px;
+    letter-spacing:0;
+    display:inline-block;
+    margin-left:5px;
+    color: gray;
+    text-decoration:none;
+}
+.review_star_rating a:first-child {margin-left:0;}
+.review_star_rating a.on {color: #c5013e;}
+
+.review_box_support{ /* 의견, textarea DIV */
+	position: relative;
+    width: 980px; height: 100px;
+}
+
+.review_comment { /* 의견 - H6 */
+	float: left;
+	display: inline-block;
+	width: 150px;
+	color: black;
+	padding-left: 30px;
+}
+.review_textarea { /* 입력창 - textarea */
+	float: left;
+	display: inline-block;
+	border-radius: 6px 6px 6px 6px;
+}
+
+#review_send_div {
+	width: 980px; height: 40px;
+	margin-top: 5px;
+}
+.review_upload_picture { /* 사진 올리기 - H6 */
+    float: left;
+    display: inline-block;
+    width: 150px;
+    color: black;
+    padding-left: 30px;
+}
+.review_photo{ /* 파일 선택 */
+    float: left;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+/* 리뷰 올리기 버튼 */
+.review_send{
+	width: 980px; height: 40px;
+	background-color: #C5013E;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+
+	border: 0;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 2px 2px 6px #616161;
+}
+
+.review_send:focus{
+  	box-shadow: 0px 0px 0px #616161;
+}
+
+
+
+
+/* 리뷰 전체 DIV */
+#comment_box {
+	width: 980px; height: 200px;
+	margin: 30px auto;
+	border-top: 2px solid #0091EA;
+	background-color: white;
+
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: 2px 2px 6px #616161;
+}
+#comment_box_title {
+	margin-left: 30px;
+	margin-top: 10px;
+}
+#comment_box > hr {
+	margin: 5px;
+}
+
+#section-left{
+	float: left;
+	width: 590px;
+	border: 1px dotted gray;
+}
+
+
+
+.review_text{
+    float: right;
+    width: 395px; 
+    margin-right: 15px;
+}
+.review_text:focus{
+    font-size: 12px;
+}
+
+#comment_content_div {
+	font-size: 0;
+}
+
+#comment_user_image_div {
+	float: left;
+	width: 180px; height: 155px;
+	display: inline-block;
+
+}
+#comment_user_image_center_div {
+	width: 100px; height: 120px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#comment_user_image_center_div > img {
+	position: absolute;
+	width: 100px; height: 100px;
+}
+#comment_user_image_center_div > p {
+	position: absolute;
+	bottom: 0;
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+	width: 100px; height: 20px;
+
+	text-align: center;
+}
+
+#comment_hr_div {
+	float: left;
+	display: inline-block;
+	width: 1px; height: 130px;
+	background-color: #F4F4F4;
+	margin-top: 12.5px;
+	margin-right: 9px;
+}
+
+#comment_user_text_div {
+	float: left;
+	width: 785px; height: 150px;
+	display: inline-block;
+
+}
+
+#comment_user_score {
+	position: relative;
+	width: 785px; height: 35px;
+}
+/* 유저 REVIEW 평점 부분 (별 그리는 부분) */
+.comment_user_star_rating {
+	position: absolute;
+	left: 0; bottom: 0;
+	font-size:0; letter-spacing:-4px;
+}
+.comment_user_star_rating a {
+    font-size:22px;
+    letter-spacing:0;
+    display:inline-block;
+    margin-left:5px;
+    color: gray;
+    text-decoration:none;
+}
+.comment_user_star_rating a:first-child {margin-left:0;}
+.comment_user_star_rating a.on {color: #c5013e;}
+
+#comment_user_star_rating_number_p {
+	display: inline-block;
+	width: 100px; height: 30px;
+	position: absolute;
+	left: 130px;
+	padding-top: 5.5px;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#comment_user_writed_div {
+	width: 785px; height: 110px;
+}
+#comment_user_writed_div > p {
+	margin-top: 20px;
+	color: black;
+	width: 700px; height: 110px;
+	font-size: 18px;
+}
+
+
+
+
+
+/* ********************************************************************* */
+
+
+/* 하단 레이아웃 구성 */
+#footer {
+	width: 100%; height: 200px;
+	background-color: #373737;
+}
+
+#footer_container {
+	padding-top: 30px;
+	width: 100%; height: 60px;
+}
+
+#footer_logo {
+	margin-left: 30px;
+}
+
+#footer_text {
+	width: 100%; height: 50px;
+}
+
+#footer_text > p {
+	margin-left: 40px;
+	font-size: 16px;
+	color: white;
+}
+
+#footer_text > p:nth-child(4) {
+	font-size: 12px;
+	color: #6a6a6a;
+}
+
+#footer_text > p:nth-child(5) {
+	font-size: 12px;	
+	color: #6a6a6a;
+}
