@@ -89,7 +89,7 @@ body {
 #image_down_arrow {
 	background-image: url('down-arrow.png');
 	width: 28px; height: 28px;
-	
+
 	vertical-align: middle;
 
 	margin-left: 50px;
@@ -120,6 +120,26 @@ body {
 	font-size: 16px;
 }
 
+#under_low_banner {
+	padding-top: 10px;
+	padding-bottom: 20px;
+	text-align: center;
+	font-size: 18px;
+}
+
+#under_low_banner > p:nth-child(1) {
+	font-weight: bold;
+	font-size: 22px;
+}
+
+#under_low_banner > p:nth-child(2) {
+	font-weight: bold;
+	margin-top: 5px;
+	font-size: 18px;
+
+}
+
+
 #low_card {
 	padding-top: 30px;
 	padding-left: 45px;
@@ -129,7 +149,16 @@ body {
 	display: inline-block;
 	margin-right: 10px;
 }
+#low_card1 {
+	padding-top: 30px;
+	padding-left: 45px;
+	padding-bottom: 60px;
+}
 
+#low_card1 > div {
+	display: inline-block;
+	margin-right: 10px;
+}
 #div_student_hall {
 	position: relative;
 }
@@ -139,6 +168,46 @@ body {
 }
 
 #div_woojung_hall {
+	position: relative;
+}
+
+#div_student_food1 {
+	position: relative;
+}
+
+#div_student_food2 {
+	position: relative;
+}
+
+#div_student_food3 {
+	position: relative;
+}
+
+#div_student_food4 {
+	position: relative;
+}
+
+#div_jingwan_food1 {
+	position: relative;
+}
+
+#div_jingwan_food2 {
+	position: relative;
+}
+
+#div_jingwan_food3 {
+	position: relative;
+}
+
+#div_woojung_food1 {
+	position: relative;
+}
+
+#div_woojung_food2 {
+	position: relative;
+}
+
+#div_woojung_food3 {
 	position: relative;
 }
 
@@ -160,12 +229,36 @@ body {
 	width: 30px;
 }
 
+.card_text_layout1 {
+	position: absolute;
+	width: 150px; height: 8px;
+	top: 50px;
+	color: #FFFFFF;
+}
+
+.card_text_layout1 > p {
+	text-align: center;
+
+	font-size: 18px;
+}
+
+.card_text_layout1 > hr {
+	margin: 5px auto;
+	width: 10px;
+}
 
 .main_card {
 	width: 300px; height: 300px;
 	border: 1px solid #CCCCCC;
 	border-radius: 15px 15px 15px 15px;
-	box-shadow: 0px 4px 6px rgba(100, 100, 100, 0.3);	
+	box-shadow: 0px 4px 6px rgba(100, 100, 100, 0.3);
+}
+
+.main_card1 {
+	width: 150px; height: 150px;
+	border: 1px solid #CCCCCC;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 0px 4px 6px rgba(100, 100, 100, 0.3);
 }
 
 #div_card_text {
@@ -228,7 +321,7 @@ body {
 }
 
 #footer_text > p:nth-child(5) {
-	font-size: 12px;	
+	font-size: 12px;
 	color: #6a6a6a;
 }
 
@@ -241,6 +334,13 @@ body {
 	box-shadow: 3px 3px 10px #000;
 	border-radius: 15px 15px 15px 15px;
 	height: 300px;
+}
+.classWithShadow1 {
+	-moz-box-shadow: 3px 3px 10px #000;
+	-webkit-box-shadow: 3px 3px 10px #000;
+	box-shadow: 3px 3px 10px #000;
+	border-radius: 15px 15px 15px 15px;
+	height: 150px;
 }
 
 .classWithShadowUl {
