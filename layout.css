@@ -12,6 +12,69 @@ a {
 	color: white;
 }
 
+/* 백종민 추가부분 */
+.card{
+	float:left;
+}
+#main_nav{
+	margin: 0 auto;
+	height: 100px; width: 1000px;
+	text-align: center;
+}
+#main_nav_logo{
+	float: left;
+	padding: 20px 0 20px 40px;
+}
+#main_nav_search{
+	float: left;
+	padding-top: 35px;
+	margin-left: 50px;
+}
+#search_bar{
+	float: left;
+	margin: 0 10px;
+	width: 250px; height: 30px;
+	border-radius: 15px;
+	border: 1px solid #cccccc;
+	background-color: white;
+}
+.search_bar_text{
+	color: black;
+	vertical-align: middle;
+	margin-left: 30px;
+}
+.inner_menu {
+	z-index: 1;
+	position: relative;
+	margin-top: 10px;
+	border-radius: 7px;
+	box-shadow: 0px 2px 6px rgba(100, 100, 100, 0.3);
+	text-decoration: none;
+	font-size: 15px;
+	color: gray;
+	height: 150px;
+}
+.inner_menu2{
+	overflow-y: scroll;
+}
+.w3-bar-block .w3-bar-item{
+	text-align:center;
+}
+#main_nav_member{
+	margin-top: 35px;
+	vertical-align: middle;
+	float: left;
+	font-size: 15px;
+	color: white;
+	padding-left: 70px;
+}
+.image_down_arrow {
+	background-image: url('down-arrow.png');
+	width: 20px; height: 20px;
+	vertical-align: middle;
+}
+/* 백종민 추가부분 끝 */
+
 /*상단 이미지 구성하는 부분*/
 #main_header_student_hall {
 	position: relative;
@@ -141,7 +204,6 @@ a {
 
 
 /* 하단부 footer CSS*/
-
 #footer {
 	width: 100%; height: 200px;
 	background-color: #373737;
@@ -175,3 +237,5 @@ a {
 	font-size: 12px;
 	color: #6a6a6a;
 }
+
+

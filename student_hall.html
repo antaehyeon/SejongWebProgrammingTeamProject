@@ -2,15 +2,116 @@
 <html>
 <head>
 	<title>SUF : 학생회관</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="layout.css">
-	<script src="http://code.jquery.com/jquery-3.2.1.js"
-	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-	crossorigin="anonymous">
-	</script>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<style type="text/css">
+/* 왜 이 스타일클래스만 옮기면 border-radius CSS가 적용안되는지 모르겠어요 ㅠㅠ*/
+	.w3-button{
+		padding: 0;
+		border-radius: 15px;
+		float: right;
+		margin-right: 10px;
+	}
+
+	.w3-bar-block .w3-bar-item{
+		text-align:center;
+	}
+
+	.inner_menu {
+		z-index: 1;
+		position: relative;
+		margin-top: 10px;
+		border-radius: 7px;
+		box-shadow: 0px 2px 6px rgba(100, 100, 100, 0.3);
+		text-decoration: none;
+		font-size: 15px;
+		color: gray;
+		height: 150px;
+	}
+	.inner_menu2{
+		overflow-y: scroll;
+	}
+</style>
 <body>
 	<div id="page_wrapper">
 		<div id="main_header_student_hall">
+			<div id="main_nav">
+	  		<a id="main_nav_logo" href="main.html">
+	  			<img src="logo_white.png" width="128px" height="60px"/>
+	  		</a>
+	  		<div id="main_nav_search">
+	  			<div id="search_bar" class="w3-dropdown-click">
+	  				<span class="search_bar_text">학생회관</span>
+	  				<button onclick="myFunction()" class="w3-button"><img class="image_down_arrow" src="down-arrow.png" /></button>
+	  				<div id="Area" class="w3-dropdown-content inner_menu w3-bar-block">
+	  					<a href="jingwan_hall.html" class="w3-bar-item w3-button">진관홀</a>
+	  					<a href="woojungdang.html" class="w3-bar-item w3-button">우정당</a>
+	  					<a href="#" class="w3-bar-item w3-button">광개토관, 찬</a>
+	  					<a href="#" class="w3-bar-item w3-button">군자관</a>
+	  				</div>
+	  			</div>
+	  			<script>
+	  			function myFunction() {
+	  			    var x = document.getElementById("Area");
+	  			    if (x.className.indexOf("w3-show") == -1) {
+	  			        x.className += " w3-show";
+	  			    } else {
+	  			        x.className = x.className.replace(" w3-show", "");
+	  			    }
+	  			}
+	  			</script>
+	  			<div id="search_bar" class="w3-dropdown-click">
+	  				<span class="search_bar_text">메뉴</span>
+	  				<button onclick="myFunction2()" class="w3-button"><img class="image_down_arrow" src="down-arrow.png" /></button>
+	  				<div id="Menu" class="w3-dropdown-content w3-bar-block inner_menu inner_menu2">
+	  					<a href="sausageomelet.html" class="w3-bar-item w3-button">소세지오물렛</a>
+	  					<a href="#" class="w3-bar-item w3-button">냉모밀</a>
+	  					<a href="#" class="w3-bar-item w3-button">치즈불닭비빔밥</a>
+	  					<a href="#" class="w3-bar-item w3-button">육회비빔밥</a>
+	  					<a href="#" class="w3-bar-item w3-button">새우튀김알밥</a>
+							<a href="#" class="w3-bar-item w3-button">오물렛</a>
+	  					<a href="#" class="w3-bar-item w3-button">유부 우동</a>
+	  					<a href="#" class="w3-bar-item w3-button">갈비탕</a>
+	  					<a href="#" class="w3-bar-item w3-button">치즈 돈까스</a>
+	  					<a href="#" class="w3-bar-item w3-button">돈까스 정식</a>
+							<a href="#" class="w3-bar-item w3-button">소금구이 덮밥</a>
+	  					<a href="#" class="w3-bar-item w3-button">돼지고기 갈릭덮밥</a>
+	  					<a href="#" class="w3-bar-item w3-button">치킨볼 오물렛</a>
+	  					<a href="#" class="w3-bar-item w3-button">돈까스 카레</a>
+	  					<a href="#" class="w3-bar-item w3-button">나가사키 짬뽕</a>
+							<a href="#" class="w3-bar-item w3-button">간장 닭 비빔밥</a>
+	  					<a href="#" class="w3-bar-item w3-button">물냉면</a>
+	  					<a href="#" class="w3-bar-item w3-button">규동</a>
+	  				</div>
+	  			</div>
+	  			<script>
+	  			function myFunction2() {
+	  			    var x = document.getElementById("Menu");
+	  			    if (x.className.indexOf("w3-show") == -1) {
+	  			        x.className += " w3-show";
+	  			    } else {
+	  			        x.className = x.className.replace(" w3-show", "");
+	  			    }
+	  			}
+	  			</script>
+	  			<!--//검색 버튼 굳이 안 써도 될거 같아요
+	  			<div id="main_nav_button">
+	  				<input type="submit" value="검색"/>
+	  			</div>-->
+				</div>
+	  		<div id="main_nav_member">
+	  			<a id="main_nav_login" href="login.html">
+	  				로그인
+	  			</a>
+	  			<span>&nbsp;|&nbsp;</span>
+	  			<a id="main_nav_join" href="join.html">
+	  				회원가입
+	  			</a>
+	  		</div>
+	  	</div>
 			<div id="main_text_title"><span>학생회관</span></div>
 			<div id="main_hr"><hr /></div>
 			<div id="main_text_content"><span>세종대학교에서 메뉴가 가장 많고 맛있는 메인 학생식당 입니다 !</span></div>
