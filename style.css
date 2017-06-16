@@ -89,7 +89,7 @@ body {
 #image_down_arrow {
 	background-image: url('down-arrow.png');
 	width: 28px; height: 28px;
-
+	
 	vertical-align: middle;
 
 	margin-left: 50px;
@@ -120,6 +120,7 @@ body {
 	font-size: 16px;
 }
 
+/* 이현제 추가기능 시작 */
 #under_low_banner {
 	padding-top: 10px;
 	padding-bottom: 20px;
@@ -138,7 +139,7 @@ body {
 	font-size: 18px;
 
 }
-
+/* 이현제 추가라인 끝 */
 
 #low_card {
 	padding-top: 30px;
@@ -149,6 +150,9 @@ body {
 	display: inline-block;
 	margin-right: 10px;
 }
+
+
+
 #low_card1 {
 	padding-top: 30px;
 	padding-left: 45px;
@@ -170,6 +174,8 @@ body {
 #div_woojung_hall {
 	position: relative;
 }
+
+/* 이현제 추가라인 시작 */
 
 #div_student_food1 {
 	position: relative;
@@ -247,11 +253,12 @@ body {
 	width: 10px;
 }
 
+
 .main_card {
 	width: 300px; height: 300px;
 	border: 1px solid #CCCCCC;
 	border-radius: 15px 15px 15px 15px;
-	box-shadow: 0px 4px 6px rgba(100, 100, 100, 0.3);
+	box-shadow: 0px 4px 6px rgba(100, 100, 100, 0.3);	
 }
 
 .main_card1 {
@@ -321,7 +328,7 @@ body {
 }
 
 #footer_text > p:nth-child(5) {
-	font-size: 12px;
+	font-size: 12px;	
 	color: #6a6a6a;
 }
 
@@ -335,6 +342,7 @@ body {
 	border-radius: 15px 15px 15px 15px;
 	height: 300px;
 }
+
 .classWithShadow1 {
 	-moz-box-shadow: 3px 3px 10px #000;
 	-webkit-box-shadow: 3px 3px 10px #000;

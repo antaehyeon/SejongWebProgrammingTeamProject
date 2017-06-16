@@ -1,4 +1,4 @@
-* {
+﻿* {
 	margin: 0; padding: 0;
 	font-family: '나눔 고딕', 'NanumGothic', 'NanumBarunGothic', Gothic, sans-serif;
 }
@@ -13,10 +13,26 @@ a {
 }
 
 /*상단 이미지 구성하는 부분*/
-#main_header {
+#main_header_student_hall {
 	position: relative;
 	height: 560px;
 	background-image: url('student_hall.jpg');
+	background-size: 100% 560px;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+}
+#main_header_woojungdang {
+	position: relative;
+	height: 560px;
+	background-image: url('우정당배경.jpg');
+	background-size: 100% 560px;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+}
+#main_header_jingwan_hall {
+	position: relative;
+	height: 560px;
+	background-image: url('진관홀배경.jpg');
 	background-size: 100% 560px;
 	background-repeat: no-repeat;
 	background-attachment: scroll;

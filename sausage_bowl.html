@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SUF : 우정당 - 소시지 덮밥</title>
+	<link rel="stylesheet" type="text/css" href="sausageOmelet.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+	<div id="page_wrapper">
+		<!-- main header -->
+		<div id="main_header_div">
+			<div id="main_information_div">
+				<div id="main_map_div">
+
+				</div>
+				<script>
+			      function initMap() {
+			        var uluru = {lat: 37.550876, lng: 127.073337};
+			        var map = new google.maps.Map(document.getElementById('main_map_div'), {
+			          zoom: 18,
+			          center: uluru
+			        });
+			        var marker = new google.maps.Marker({
+			          position: uluru,
+			          map: map
+			        });
+			      }
+			    </script>
+			    <script async defer
+			    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz_XK92GPvvKwxfI9m1rrzOMhRSs8v-S4&callback=initMap">
+			    </script>
+				<div id="main_introduce_div">
+					<div id="main_introduce_text_div">
+						<div id="title">
+							<div id="title_food_name">
+								<p>소시지 덮밥</p>
+							</div>
+							<div id="title_hash_tag">
+								<p>#세종대 #우정당 #덮밥 #명불허전 #소시지</p>
+							</div>
+						</div>
+						<hr />
+						<div id="score" class="main_container_title_parent">
+							<div id="score_title" class="main_container_title_div">
+								<p class="main_container_title_p">평점</p>
+							</div>
+							<div class="main_container_content_div">
+								<p class="star_rating">
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#">★</a>
+								</p>
+								<p id="main_container_rating_text_p">4.4</p>
+							</div>
+						</div>
+						<div id="location" class="main_container_title_parent">
+							<div id="location_title" class="main_container_title_div">
+								<p class="main_container_title_p">위치</p>
+							</div>
+							<div class="main_container_content_div">
+								<p class="main_container_content_p">세종대학교 우정당에서 제공해요 :)</p>
+							</div>
+						</div>
+						<div id="price" class="main_container_title_parent">
+							<div id="price_title" class="main_container_title_div">
+								<p class="main_container_title_p">가격</p>
+							</div>
+							<div class="main_container_content_div">
+								<p class="main_container_content_p">3,800원</p>
+							</div>
+						</div>
+						<div id="time" class="main_container_title_parent">
+							<div id="time_title" class="main_container_title_div">
+								<p class="main_container_title_p">영업시간</p>
+							</div>
+							<div class="main_container_content_div">
+								<p class="main_container_content_p">오후 7시까지 !</p>
+							</div>
+						</div>
+						<div id="holiday" class="main_container_title_parent">
+							<div id="holiday_title" class="main_container_title_div">
+								<p class="main_container_title_p">휴무일</p>
+							</div>
+							<div class="main_container_content_div">
+								<p class="main_container_content_p">딱히 없어요! 주말도 가능~</p>
+							</div>
+						</div>
+						<div id="comment" class="main_container_title_parent">
+							<div id="comment_title" class="main_container_title_div">
+								<p class="main_container_title_p">한줄평</p>
+							</div>
+							<div class="main_container_content_div">
+								<p class="main_container_content_p">어디에나 잘 어울리는 소시지를 신선한 야채가 들어있는 덮밥과 함께 먹으니 맛있는 걸 먹으면서 건강해지는 기분이 드네요 :) </p>
+							</div>
+						</div>
+						<p>&nbsp;</p>
+						<hr />
+					</div>
+
+					<div id="main_introduce_image_div">
+						<div class="main_introduce_image_card_div">
+							<img src="소시지1.jpg">
+						</div>
+						<div class="main_introduce_image_card_div">
+							<img src="소시지2.jpg">
+						</div>
+						<div class="main_introduce_image_card_div">
+							<img src="소시지3.jpg">
+						</div>
+						<div class="main_introduce_image_card_div">
+							<img src="소시지4.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- main container -->
+		<div id="main_container">
+			<div id="main_container_board_div">
+				<!-- 백종민 PART -->
+				<!-- RE DESIGN -->
+			    <div id="review_box">
+			      	<h4 class="review_title">리뷰 작성</h4>
+			      	<hr />
+			      	<div id="review_score">
+				      	<h6 class="review_title2">평점</h6>
+						<p class="review_star_rating">
+					    <a href="#" class="on">★</a>
+					    <a href="#" class="on">★</a>
+					    <a href="#" class="on">★</a>
+					    <a href="#" class="on">★</a>
+					    <a href="#" >★</a>
+					</p>
+			      	</div>
+			      	<div class="review_box_support">
+		        		<h6 class="review_comment">의견</h6>
+			        	<textarea class="review_textarea" rows="4" cols="100" style="resize:none"></textarea>
+			      	</div>
+			      	<h6 class="review_upload_picture">사진 올리기</h6>
+		    		<input class="review_photo" type="file" name="photo" value="photo"/>
+			    </div>
+
+	    		<div id="review_send_div">
+	    			<input class="review_send" type="submit" value="리뷰 올리기"/>
+	    		</div>
+
+
+			    <div id="comment_box">
+			      	<p id="comment_box_title">리뷰</p>
+			      	<hr />
+			      	<div id="comment_content_div">
+				      	<div id="comment_user_image_div">
+				      		<div id="comment_user_image_center_div">
+				      			<img src="user.jpg">
+				      			<p>율곡관 님</p>
+				      		</div>
+				      	</div>
+				      	<div id="comment_hr_div"></div>
+			     	 	<div id="comment_user_text_div">
+			     	 		<div id="comment_user_score">
+								<p class="comment_user_star_rating">
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								     <a href="#" class="on">★</a>
+								</p>
+								<p id="comment_user_star_rating_number_p">5 점</p>
+			     	 		</div>
+			     	 		<div id="comment_user_writed_div">
+			     	 			<p>세종대학교 학식 유명하다고 해서 찾아왔는데 소시지 오믈렛 너무 맛있어요!
+			     	 			소시지를 신선한 야채가 많은 덮밥과 함꼐 먹으니 절로 건강해지는것 같네요 :)</p>
+			     	 		</div>
+			     	 	</div>
+			      	</div>
+	      		</div>
+
+			    <div id="comment_box">
+			      	<p id="comment_box_title">리뷰</p>
+			      	<hr />
+			      	<div id="comment_content_div">
+				      	<div id="comment_user_image_div">
+				      		<div id="comment_user_image_center_div">
+				      			<img src="user.jpg">
+				      			<p>율곡관 님</p>
+				      		</div>
+				      	</div>
+				      	<div id="comment_hr_div"></div>
+			     	 	<div id="comment_user_text_div">
+			     	 		<div id="comment_user_score">
+								<p class="comment_user_star_rating">
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" >★</a>
+								</p>
+								<p id="comment_user_star_rating_number_p">4 점</p>
+			     	 		</div>
+			     	 		<div id="comment_user_writed_div">
+			     	 			<p>세종대학교 학식 유명하다고 해서 찾아왔는데 소시지 오믈렛 너무 맛있어요!
+			     	 			소시지를 신선한 야채가 많은 덮밥과 함꼐 먹으니 절로 건강해지는것 같네요 :)</p>
+			     	 		</div>
+			     	 	</div>
+			      	</div>
+	      		</div>
+
+	      		<div id="comment_box">
+			      	<p id="comment_box_title">리뷰</p>
+			      	<hr />
+			      	<div id="comment_content_div">
+				      	<div id="comment_user_image_div">
+				      		<div id="comment_user_image_center_div">
+				      			<img src="user.jpg">
+				      			<p>율곡관 님</p>
+				      		</div>
+				      	</div>
+				      	<div id="comment_hr_div"></div>
+			     	 	<div id="comment_user_text_div">
+			     	 		<div id="comment_user_score">
+								<p class="comment_user_star_rating">
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" >★</a>
+								</p>
+								<p id="comment_user_star_rating_number_p">4 점</p>
+			     	 		</div>
+			     	 		<div id="comment_user_writed_div">
+			     	 			<p>세종대학교 학식 유명하다고 해서 찾아왔는데 소시지 오믈렛 너무 맛있어요!
+			     	 			소시지를 신선한 야채가 많은 덮밥과 함꼐 먹으니 절로 건강해지는것 같네요 :)</p>
+			     	 		</div>
+			     	 	</div>
+			      	</div>
+	      		</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div id="footer">
+			<div id="footer_container">
+				<a id="footer_logo" href="main.html">
+					<img src="logo_white.png" width="128px" height="60px">
+				</a>
+				<div id="footer_text">
+					<p>세종대의 학식을 하나부터 열까지.</p>
+					<p>맛있게 먹어보자, Sejong University Food</p>
+					<p>&nbsp;</p>
+					<p> Made by. 웹프로그래밍 팀프로젝트</p>
+					<p>백종민 안태현 이혜민 이현제</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
