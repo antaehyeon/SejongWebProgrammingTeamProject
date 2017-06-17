@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SUF : 학생회관 - 치즈 돈까스(Cheese Pork Cutlet)</title>
+	<link rel="stylesheet" type="text/css" href="sausageOmelet.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+	<div id="page_wrapper">
+		<!-- main header -->
+		<div id="main_header_div">
+			<div id="main_information_div">
+				<div id="main_map_div">
+
+				</div>
+				<script>
+			      function initMap() {
+			        var uluru = {lat: 37.549393, lng: 127.075074};
+			        var map = new google.maps.Map(document.getElementById('main_map_div'), {
+			          zoom: 18,
+			          center: uluru
+			        });
+			        var marker = new google.maps.Marker({
+			          position: uluru,
+			          map: map
+			        });
+			      }
+			    </script>
+			    <script async defer
+			    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz_XK92GPvvKwxfI9m1rrzOMhRSs8v-S4&callback=initMap">
+			    </script>
+				<div id="main_introduce_div">
+					<div id="main_introduce_text_div">
+						<div id="title">
+							<div id="title_food_name">
+								<p>치즈 돈까스</p>
+							</div>
+							<div id="title_hash_tag">
+								<p>#세종대 #학식 #한식 #양식 #쫄깃쫄깃 #돈까스</p>
+							</div>
+						</div>
+						<hr />
+						<div id="score" class="main_container_title_parent">
+							<div id="score_title" class="main_container_title_div">
+								<p class="main_container_title_p">평점</p>
+							</div>
+							<div class="main_container_content_div">
+								<p class="star_rating">
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+										<a href="#" class="on">★</a>
+
+								</p>
+								<p id="main_container_rating_text_p">4.0</p>
+							</div>
+						</div>
+						<div id="location" class="main_container_title_parent">
+							<div id="location_title" class="main_container_title_div">
+								<p class="main_container_title_p">위치</p>
+							</div>
+							<div class="main_container_content_div">
+								<p class="main_container_content_p">세종대학교 학생회관 나루또에서 제공해요 :)</p>
+							</div>
+						</div>
+						<div id="price" class="main_container_title_parent">
+							<div id="price_title" class="main_container_title_div">
+								<p class="main_container_title_p">가격</p>
+							</div>
+							<div class="main_container_content_div">
+								<p class="main_container_content_p">4,000원</p>
+							</div>
+						</div>
+						<div id="time" class="main_container_title_parent">
+							<div id="time_title" class="main_container_title_div">
+								<p class="main_container_title_p">영업시간</p>
+							</div>
+							<div class="main_container_content_div">
+								<p class="main_container_content_p">오후 8시까지 !</p>
+							</div>
+						</div>
+						<div id="holiday" class="main_container_title_parent">
+							<div id="holiday_title" class="main_container_title_div">
+								<p class="main_container_title_p">휴무일</p>
+							</div>
+							<div class="main_container_content_div">
+								<p class="main_container_content_p">딱히 없어요! 주말도 가능~</p>
+							</div>
+						</div>
+						<div id="comment" class="main_container_title_parent">
+							<div id="comment_title" class="main_container_title_div">
+								<p class="main_container_title_p">한줄평</p>
+							</div>
+							<div class="main_container_content_div">
+								<p class="main_container_content_p">그냥 돈까스는 질릴 때! 치즈 돈까스 드셔보세요~</p>
+							</div>
+						</div>
+						<p>&nbsp;</p>
+						<hr />
+					</div>
+
+					<div id="main_introduce_image_div">
+						<div class="main_introduce_image_card_div">
+							<img src="치즈 돈까스.jpg">
+						</div>
+						<div class="main_introduce_image_card_div">
+							<img src="치즈 돈까스.jpg">
+						</div>
+						<div class="main_introduce_image_card_div">
+							<img src="치즈 돈까스.jpg">
+						</div>
+						<div class="main_introduce_image_card_div">
+							<img src="치즈 돈까스.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- main container -->
+		<div id="main_container">
+			<div id="main_container_board_div">
+				<!-- 백종민 PART -->
+				<!-- RE DESIGN -->
+			    <div id="review_box">
+			      	<h4 class="review_title">리뷰 작성</h4>
+			      	<hr />
+			      	<div id="review_score">
+				      	<h6 class="review_title2">평점</h6>
+						<p class="review_star_rating">
+					    <a href="#" class="on">★</a>
+					    <a href="#" class="on">★</a>
+					    <a href="#" class="on">★</a>
+					    <a href="#" class="on">★</a>
+					    <a href="#" >★</a>
+					</p>
+			      	</div>
+			      	<div class="review_box_support">
+		        		<h6 class="review_comment">의견</h6>
+			        	<textarea class="review_textarea" rows="4" cols="100" style="resize:none"></textarea>
+			      	</div>
+			      	<h6 class="review_upload_picture">사진 올리기</h6>
+		    		<input class="review_photo" type="file" name="photo" value="photo"/>
+			    </div>
+
+	    		<div id="review_send_div">
+	    			<input class="review_send" type="submit" value="리뷰 올리기"/>
+	    		</div>
+
+
+			    <div id="comment_box">
+			      	<p id="comment_box_title">리뷰</p>
+			      	<hr />
+			      	<div id="comment_content_div">
+				      	<div id="comment_user_image_div">
+				      		<div id="comment_user_image_center_div">
+				      			<img src="user.jpg">
+				      			<p>율곡관 님</p>
+				      		</div>
+				      	</div>
+				      	<div id="comment_hr_div"></div>
+			     	 	<div id="comment_user_text_div">
+			     	 		<div id="comment_user_score">
+								<p class="comment_user_star_rating">
+
+								    <a href="#" class="on">★</a>
+								    <a href="#" >★</a>
+								</p>
+								<p id="comment_user_star_rating_number_p">1 점</p>
+			     	 		</div>
+			     	 		<div id="comment_user_writed_div">
+			     	 			<p>깔끔하고 좋아요!</p>
+			     	 		</div>
+			     	 	</div>
+			      	</div>
+	      		</div>
+
+			    <div id="comment_box">
+			      	<p id="comment_box_title">리뷰</p>
+			      	<hr />
+			      	<div id="comment_content_div">
+				      	<div id="comment_user_image_div">
+				      		<div id="comment_user_image_center_div">
+				      			<img src="user.jpg">
+				      			<p>율곡관 님</p>
+				      		</div>
+				      	</div>
+				      	<div id="comment_hr_div"></div>
+			     	 	<div id="comment_user_text_div">
+			     	 		<div id="comment_user_score">
+								<p class="comment_user_star_rating">
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+										<a href="#" class="on">★</a>
+								    <a href="#" >★</a>
+								</p>
+								<p id="comment_user_star_rating_number_p">5 점</p>
+			     	 		</div>
+			     	 		<div id="comment_user_writed_div">
+			     	 			<p>넘나 맛있는것! 강추!</p>
+			     	 		</div>
+			     	 	</div>
+			      	</div>
+	      		</div>
+
+	      		<div id="comment_box">
+			      	<p id="comment_box_title">리뷰</p>
+			      	<hr />
+			      	<div id="comment_content_div">
+				      	<div id="comment_user_image_div">
+				      		<div id="comment_user_image_center_div">
+				      			<img src="user.jpg">
+				      			<p>율곡관 님</p>
+				      		</div>
+				      	</div>
+				      	<div id="comment_hr_div"></div>
+			     	 	<div id="comment_user_text_div">
+			     	 		<div id="comment_user_score">
+								<p class="comment_user_star_rating">
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" class="on">★</a>
+								    <a href="#" >★</a>
+								</p>
+								<p id="comment_user_star_rating_number_p">4 점</p>
+			     	 		</div>
+			     	 		<div id="comment_user_writed_div">
+			     	 			<p>치즈가 줄줄 너무 맛있네요</p>
+			     	 		</div>
+			     	 	</div>
+			      	</div>
+	      		</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div id="footer">
+			<div id="footer_container">
+				<a id="footer_logo" href="main.html">
+					<img src="logo_white.png" width="128px" height="60px">
+				</a>
+				<div id="footer_text">
+					<p>세종대의 학식을 하나부터 열까지.</p>
+					<p>맛있게 먹어보자, Sejong University Food</p>
+					<p>&nbsp;</p>
+					<p> Made by. 웹프로그래밍 팀프로젝트</p>
+					<p>백종민 안태현 이혜민 이현제</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
