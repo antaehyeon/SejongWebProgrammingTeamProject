@@ -7,6 +7,15 @@
 	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" 
 	crossorigin="anonymous">
 	</script>
+	<script type="text/javascript" src="typed.js"></script>
+	<script>
+		$(function(){
+			$(".banner_span").typed({
+				strings: ["　학식을 먹는 즐거움 :)", "세종대학교 학식 가이드 !"],
+				typeSpeed: 80
+			});
+		});
+	</script>
 </head>
 <style>
 	body {
@@ -34,8 +43,7 @@
 
 		<div id=main_container>
 			<div id=banner>
-				<p>학식을 먹는 즐거움</p>
-				<p>세종대학교 학식 가이드, SUF</p>
+				<span class="banner_span"></span>
 			</div>
 			<div id=search_bar>
 				<img id="image_location" src="location-pin.png"></img>

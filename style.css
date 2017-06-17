@@ -46,12 +46,12 @@ body {
 }
 
 #banner {
-	width: 350px;
+	width: 300px;
 	margin: 0 auto;
 	padding-bottom: 80px;
 }
 
-#banner > p {
+#banner > span {
 	text-align: center;
 	font-size: 26px;
 	color: white;
