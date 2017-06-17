@@ -38,11 +38,30 @@
     		</div>
 	      	<div id="container_button">
 				<p>&nbsp;</p>
-  				<button id="button_login" onclick="alert('로그인');">로그인</button>
+  				<button id="button_login" onclick="login();">로그인</button>
       			<p>&nbsp;</p>
       			<a href="main.html"><button id="button_back">뒤로가기</button></a>
       			<p>&nbsp;</p>
-			</div>
+			    </div>
+          <script type="text/javascript">
+            function login() {
+              var loginEmail = document.getElementById("email");
+              var loginPW = document.getElementById("password");
+
+              var localStorageEmail = localStorage.getItem("Email");
+              var localStoragePW = localStorage.getItem("Password");
+              var localStorageName = localStorage.getItem("Name");
+
+              if ((loginEmail.value == localStorageEmail) && (loginPW.value == localStoragePW)) {
+                localStorage.setItem("loginState", "OK");
+                var msg = localStorageName + "님 환영합니다 :)";
+                alert(msg);
+                location.href="main.html";
+              } else {
+                alert("아이디 및 비밀번호를 확인하세요 :/");
+              }
+            }
+          </script>
       	</div>
 	</div>
 

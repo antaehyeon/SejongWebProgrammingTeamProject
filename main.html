@@ -11,17 +11,12 @@
 	<script>
 		$(function(){
 			$(".banner_span").typed({
-				strings: ["　학식을 먹는 즐거움 :)", "세종대학교 학식 가이드 !"],
+				strings: ["　학식을 먹는 즐거움 :)", "　세종대학교 학식가이드!"],
 				typeSpeed: 80
 			});
 		});
 	</script>
 </head>
-<style>
-	body {
-
-	}
-</style>
 <body>
 	<!-- wrap -->
 	<div id="page_wrapper">
@@ -33,10 +28,45 @@
 						<img id="logo" src="logo.png" width="128px" height="60px">
 					</a>
 					<div id="connect">
-						<a href="login.html"><span>로그인</span></a>
-						<span> | </span>
-						<a href="join.html"><span>회원가입</span></a>
+						<span id="introduce"></span>
+						<a id="login" href="login.html"><span>로그인</span></a>
+						<span id="division_line"> | </span>
+						<a id="logout" onclick="logout()"><span>로그아웃</span></a>
+						<a id="join" href="join.html"><span>회원가입</span></a>
 					</div>
+					<script type="text/javascript">
+						if(localStorage.getItem("loginState") == "OK") {
+							var introSpan = document.getElementById("introduce");
+							var a = document.getElementById("login");
+							var b = document.getElementById("division_line");
+							var c = document.getElementById("join");
+
+							var name = localStorage.getItem("Name");
+							introSpan.innerHTML = name + "님 환영합니다";
+
+							a.style["display"] = "none";
+							b.style["display"] = "none";
+							c.style["display"] = "none";
+							introSpan.style["display"] = "block";
+						}
+					</script>
+					<script type="text/javascript">
+						function logout() {
+							localStorage.clear();
+							alert("로그아웃 되었습니다");
+							var introSpan = document.getElementById("introduce");
+							var logoutSpan = document.getElementById("logout");
+							var a = document.getElementById("login");
+							var b = document.getElementById("division_line");
+							var c = document.getElementById("join");
+
+							a.style["display"] = "inline-block";
+							b.style["display"] = "inline-block";
+							c.style["display"] = "inline-block";
+							introSpan.style["display"] = "none";
+							logoutSpan.style["display"] = "none";
+						}
+					</script>
 				</div>
 			</nav>
 		</div>

@@ -30,6 +30,14 @@ body {
 	margin-right: 40px;
 }
 
+#introduce {
+	display: none;
+}
+
+#logout {
+	display: none;
+}
+
 #connect > a {
 	text-decoration: none;
 	color: white;
@@ -52,6 +60,7 @@ body {
 }
 
 #banner > span {
+	display: inline-block;
 	text-align: center;
 	font-size: 26px;
 	color: white;
