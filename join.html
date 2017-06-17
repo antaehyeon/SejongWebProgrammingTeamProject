@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <link type ="text/css"rel="stylesheet" href="join.css">
     <title>SUF : 회원가입</title>
+    <script type="text/javascript">
+      localStorage.setItem("USEAGREE", "F");
+      localStorage.setItem("INFOAGREE", "F");
+    </script>
   </head>
 
   <body>
@@ -13,6 +17,7 @@
       </div>
 
       <div id="main_container">
+        <div id="agree_popup"></div>
         <div id="container_logo">
           <a id="logo" href="main.html">
             <img src="logo.png" width="128px" height="60px">
@@ -37,27 +42,27 @@
             </label>
             <p>&nbsp;</p>
             <label for="password">
-              <input id="password" type="password" name="password" placeholder="비밀번호 확인">
+              <input id="password_check" type="password" name="password" placeholder="비밀번호 확인">
             </label>
             <p>&nbsp;</p>
             <label for="name">
-              <input id="name" type="name" name="name" placeholder="이름">
+              <input id="name" type="text" name="name" placeholder="이름">
             </label>
             <p>&nbsp;</p>
             <label for="class_no">
-              <input id="class_no" type="classNo" name="classNo" placeholder="학번">
+              <input id="class_no" type="text" name="classNo" placeholder="학번(숫자만 입력)">
             </label>
             <p>&nbsp;</p>
             <label for="phone_number">
-              <select id="phone_number_first" type="phone_number" name="first" placeholder="010">
+              <select id="phone_number_first" type="text" name="first" placeholder="010">
                 <option>010</option>
                 <option>011</option>
                 <option>016</option>
                 <option>017</option>
                 <option>019</option>
               </select>
-              <input id="phone_number_second" type="phone_number" name="second" placeholder="1234">
-              <input id="phone_number_third" type="phone_number" name="third" placeholder="4321">
+              <input id="phone_number_second" type="text" name="second" placeholder="1234">
+              <input id="phone_number_third" type="text" name="third" placeholder="4321">
             </label>
             <p>&nbsp;</p>
             <hr />
@@ -66,22 +71,142 @@
         <p>&nbsp;</p>
         <div id="low_container">
           <div id="agree">
-            <input type="checkbox" name="">
+            <!-- <input type="checkbox" name=""> -->
             <span>이용약관 동의</span>
-            <button>자세히 보기</button>
+            <button onclick="checkAgree()">자세히 보기</button>
           </div>
           <div id="agree">
-            <input type="checkbox" name="">
+            <!-- <input type="checkbox" name=""> -->
             <span>개인정보 취급 동의</span>
-            <button>자세히 보기</button>
+            <button onclick="checkInfoAgree()">자세히 보기</button>
           </div>
+
+          <script type="text/javascript">
+            function checkAgree() {
+              var r = confirm("이용약관에 동의하십니까?");
+              if (r == true) {
+                localStorage.setItem("USEAGREE", "T");
+              } else {
+                localStorage.setItem("USEAGREE", "F");
+              }
+            }
+            function checkInfoAgree() {
+              var r = confirm("개인정보 취급에 동의하십니까?");
+              if (r == true) {
+                localStorage.setItem("INFOAGREE", "T");
+              } else {
+                localStorage.setItem("INFOAGREE", "F");
+              }
+            }
+          </script>
+
           <p>&nbsp;</p>
           <hr />
         </div>
 
         <div id="confirm_container">
           <p>&nbsp;</p>
-          <button id="button_join" onclick="alert('회원가입이 완료되었습니다')";>회원가입</button>
+          <button id="button_join" onclick="joinCheck()";>회원가입</button>
+
+          <!-- 회원가입을 체크하는 부분입니다 -->
+          <!-- 정규식을 이용하였습니다 :) -->
+          <script type="text/javascript">
+            function joinCheck() {
+
+              // 각 개체를 받고
+              var email = document.getElementById("email");
+              var password = document.getElementById("password");
+              var passwordCheck = document.getElementById("password_check");
+              var name = document.getElementById("name");
+              var classNo = document.getElementById("class_no");
+              var firstPN = document.getElementById("phone_number_first");
+              var secondPN = document.getElementById("phone_number_second");
+              var thirdPN = document.getElementById("phone_number_third");
+
+              // 정규식 구문을 이용하였습니다
+              var numberCheck = /^[0-9]+$/;
+              var nameCheck = /^[가-힣]+$/;
+
+
+              // // 각 객체에 대한 예외처리를 담당하였습니다 :)
+              if (email.value == "") {
+                alert("이메일을 제대로 입력해주세요!");
+                setFocusAndBoxShadow(email);
+                return false;
+              }
+              if (password.value == "") {
+                alert("비밀번호가 입력되지 않았습니다!");
+                setFocusAndBoxShadow(password);
+                return false;
+              } else if (password.value != passwordCheck.value) {
+                alert("비밀번호가 일치하지 않습니다!");
+                setFocusAndBoxShadow(passwordCheck);
+                return false;
+              }
+              if (name.value == "") {
+                alert("이름이 입력되지 않았습니다!");
+                setFocusAndBoxShadow(name);
+                return false;
+              }
+              else if (!nameCheck.test(name.value)) {
+                alert("이름을 제대로 입력해주세요!");
+                setFocusAndBoxShadow(name);
+                return false;
+              }
+              if (classNo.value == "") {
+                alert("학번이 입력되지 않았습니다!");
+                setFocusAndBoxShadow(classNo);
+                return false;
+              }
+              else if (!numberCheck.test(classNo.value)) {
+                alert("학번에는 숫자외에 값이 들어갈 수 없어요!");
+                setFocusAndBoxShadow(classNo);
+                return false;
+              } else if (classNo.value.length < 6) {
+                alert("학번이 너무 짧아요!");
+                setFocusAndBoxShadow(classNo);
+                return false;
+              }
+              if (!numberCheck.test(secondPN.value) || secondPN.value.length != 4) {
+                alert("휴대폰번호를 제대로 입력해주세요!");
+                setFocusAndBoxShadow(secondPN);
+                return false;
+              }
+              if (!numberCheck.test(thirdPN.value) || thirdPN.value.length != 4) {
+                alert("휴대폰번호를 제대로 입력해주세요!");
+                setFocusAndBoxShadow(thirdPN);
+                return false;
+              }
+              if (localStorage.getItem("USEAGREE") == "F") {
+                alert("이용약관 자세히보기를 클릭하셔서 동의해주세요 :)");
+                return false;
+              }
+              if (localStorage.getItem("INFOAGREE") == "F") {
+                alert("개인정보 취급보기의 자세히보기를 클릭하셔서 동의해주세요 :)")
+                return false;
+              }
+
+              // localStorage 에 저장하는 부분
+              localStorage.setItem("Email", email.value);
+              localStorage.setItem("Password", password.value);
+              localStorage.setItem("Name", name.value);
+              localStorage.setItem("ClassNo", classNo.value);
+              localStorage.setItem("FirstPhoneNumber", firstPN.value);
+              localStorage.setItem("SecondPhoneNumber", secondPN.value);
+              localStorage.setItem("ThirdPhoneNumber", thirdPN.value);
+
+              var msg = localStorage.getItem("Name") + " 님 가입을 축하합니다 :)";
+              alert(msg);
+            }
+
+            // 반복적인 구문을 정리하기 위해서 함수로 처리하였습니다
+            // 박스색깔과 포커스로 UX 환경을 개선하였습니다
+            function setFocusAndBoxShadow(element) {
+              element.style["box-shadow"] = "1px 1px 8px #F44336";
+              element.focus();
+            }
+          </script>
+
           <p>&nbsp;</p>
           <a href="main.html"><button id="button_back">뒤로가기</button></a>
           <p>&nbsp;</p>
