@@ -8,6 +8,7 @@
 	crossorigin="anonymous">
 	</script>
 	<script type="text/javascript" src="typed.js"></script>
+	<!-- 타이핑 효과를 구현하는 부분입니다 -->
 	<script>
 		$(function(){
 			$(".banner_span").typed({
@@ -27,6 +28,7 @@
 					<a id="nav_logo" href="main.html">
 						<img id="logo" src="logo.png" width="128px" height="60px">
 					</a>
+					<!-- 상단 오른쪽의 로그인 및 회원가입 DIV 입니다 -->
 					<div id="connect">
 						<a id="login" href="login.html"><span>로그인</span></a>
 						<span id="division_line"> | </span>
@@ -34,6 +36,7 @@
 						<span id="introduce"></span>
 						<a id="logout" href="#" onclick="logout()"><span>로그아웃</span></a>
 					</div>
+					<!-- 로그인 상태에 따라서 바뀌는 부분을 JS로 구현한 부분입니다 -->
 					<script type="text/javascript">
 						if(localStorage.getItem("loginState") == "OK") {
 							var introSpan = document.getElementById("introduce");
@@ -52,6 +55,7 @@
 							logoutSpan.style["display"] = "block";
 						}
 					</script>
+					<!-- 로그아웃 버튼을 클릭할 시 처음 상태로 돌아가도록 구현한 부분입니다 -->
 					<script type="text/javascript">
 						function logout() {
 							localStorage.clear();
@@ -77,6 +81,7 @@
 			<div id=banner>
 				<span class="banner_span"></span>
 			</div>
+			<!-- 메인화면 중간에 식당으로 이동할 수 있는 bar를 구현한 부분입니다 -->
 			<div id=search_bar>
 				<img id="image_location" src="location-pin.png"></img>
 				<span id="search_bar_text">세종대 식당을 찾아보세요!</span>
@@ -85,8 +90,6 @@
 					<li class="inner_menu_shadow"><a href="student_hall.html">학생회관</a></li>
 					<li class="inner_menu_shadow"><a href="jingwan_hall.html">진관홀</a></li>
 					<li class="inner_menu_shadow"><a href="woojungdang.html">우정당</a></li>
-<!-- 					<li class="inner_menu_shadow"><a href="#">광개토관, 찬</a></li>
-					<li class="inner_menu_shadow"><a href="#">군자관</a></li> -->
 				</ul>
 
 				<script type="text/javascript">
@@ -97,6 +100,7 @@
 			</div>
 		</div>
 
+		<!-- 화살표 부분을 클릭했을 때 구현한 부분입니다 -->
 		<script type="text/javascript">
 			$(document).ready(function () {
 				$("#down_arrow").click(function () {
@@ -105,12 +109,15 @@
 			});
 		</script>
 
+		<!-- 안내 문구 -->
 		<div id=low_container>
 			<div id="low_banner">
 				<p>음식으로 인한 즐거움</p>
 				<p>지금부터 시작하세요 :)</p>
 			</div>
 
+			<!-- 카드 형식으로 구현한 부분입니다 -->
+			<!-- 식당으로 이동할 수 있는 부분입니다 -->
 			<div id="low_card">
 				<div id="div_student_hall" class="image_box">
 					<a href="student_hall.html">
@@ -311,6 +318,7 @@
 		</div>
 
 		<!-- footer -->
+		<!-- 하단 부분입니다 모든페이지에 동일하게 적용됩니다 -->
 		<div id="footer">
 			<div id="footer_container">
 				<a id="footer_logo" href="main.html">
