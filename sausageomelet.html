@@ -4,11 +4,122 @@
 	<title>SUF : 학생회관 - 소시지오믈렛(Sausage Omelet)</title>
 	<link rel="stylesheet" type="text/css" href="sausageOmelet.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style type="text/css">
+	/* 왜 이 스타일클래스만 옮기면 border-radius CSS가 적용안되는지 모르겠어요 ㅠㅠ*/
+		.w3-button{
+			padding: 0;
+			border-radius: 15px;
+			float: right;
+			margin-right: 10px;
+		}
+
+		.w3-bar-block .w3-bar-item{
+			text-align:center;
+		}
+		.inner_menu {
+			z-index: 1;
+			position: relative;
+			margin-top: 10px;
+			border-radius: 7px;
+			box-shadow: 0px 2px 6px rgba(100, 100, 100, 0.3);
+			text-decoration: none;
+			font-size: 15px;
+			color: gray;
+			height: 120px;
+		}
+		.inner_menu2{
+			overflow-y: scroll;
+		}
+	</style>
 </head>
 <body>
 	<div id="page_wrapper">
 		<!-- main header -->
 		<div id="main_header_div">
+				<div id="main_nav">
+					<a id="main_nav_logo" href="main.html">
+						<img src="logo_white.png" width="128px" height="60px"/>
+					</a>
+					<div id="main_nav_search">
+						<div id="search_bar" class="w3-dropdown-click">
+							<span class="search_bar_text">식당</span>
+							<button onclick="myFunction()" class="w3-button"><img class="image_down_arrow" src="down-arrow.png" /></button>
+							<div id="Area" class="w3-dropdown-content inner_menu w3-bar-block">
+								<a href="student_hall.html" class="w3-bar-item w3-button">학생회관</a>
+								<a href="jingwan_hall.html" class="w3-bar-item w3-button">진관홀</a>
+								<a href="woojungdang.html" class="w3-bar-item w3-button">우정당</a>
+							</div>
+						</div>
+						<script>
+						function myFunction() {
+								var x = document.getElementById("Area");
+								if (x.className.indexOf("w3-show") == -1) {
+										x.className += " w3-show";
+								} else {
+										x.className = x.className.replace(" w3-show", "");
+								}
+						}
+						</script>
+						<div id="search_bar" class="w3-dropdown-click">
+							<span class="search_bar_text">메뉴</span>
+							<button onclick="myFunction2()" class="w3-button"><img class="image_down_arrow" src="down-arrow.png" /></button>
+							<div id="Menu" class="w3-dropdown-content w3-bar-block inner_menu inner_menu2">
+								<a href="sausageomelet.html" class="w3-bar-item w3-button">소세지오믈렛</a>
+								<a href="#" class="w3-bar-item w3-button">냉모밀</a>
+								<a href="#" class="w3-bar-item w3-button">치즈불닭비빔밥</a>
+								<a href="#" class="w3-bar-item w3-button">육회비빔밥</a>
+								<a href="#" class="w3-bar-item w3-button">새우튀김알밥</a>
+								<a href="#" class="w3-bar-item w3-button">오물렛</a>
+								<a href="#" class="w3-bar-item w3-button">유부 우동</a>
+								<a href="#" class="w3-bar-item w3-button">갈비탕</a>
+								<a href="#" class="w3-bar-item w3-button">치즈 돈까스</a>
+								<a href="#" class="w3-bar-item w3-button">돈까스 정식</a>
+								<a href="#" class="w3-bar-item w3-button">소금구이 덮밥</a>
+								<a href="#" class="w3-bar-item w3-button">돼지고기 갈릭덮밥</a>
+								<a href="#" class="w3-bar-item w3-button">치킨볼 오물렛</a>
+								<a href="#" class="w3-bar-item w3-button">돈까스 카레</a>
+								<a href="#" class="w3-bar-item w3-button">나가사키 짬뽕</a>
+								<a href="#" class="w3-bar-item w3-button">간장 닭 비빔밥</a>
+								<a href="#" class="w3-bar-item w3-button">물냉면</a>
+								<a href="#" class="w3-bar-item w3-button">규동</a>
+							</div>
+						</div>
+						<script>
+						function myFunction2() {
+								var x = document.getElementById("Menu");
+								if (x.className.indexOf("w3-show") == -1) {
+										x.className += " w3-show";
+								} else {
+										x.className = x.className.replace(" w3-show", "");
+								}
+						}
+						</script>
+					</div>
+					<div id="main_nav_member" class="main_nav">
+						<a id="main_nav_login" href="login.html">로그인</a>
+						<span>&nbsp;|&nbsp;</span>
+						<a id="main_nav_join" href="join.html">회원가입</a>
+					</div>
+					<div id="login_information" class="main_nav">
+						<span id="login_information_span"></span>
+					</div>
+					<script type="text/javascript">
+						var memberDiv = document.getElementById("main_nav_member");
+						var loginInfo = document.getElementById("login_information");
+						var loginInfoSpan = document.getElementById("login_information_span");
+
+						if(localStorage.getItem("loginState") == "OK") {
+							var name = localStorage.getItem("Name");
+							loginInfoSpan.innerHTML = name + "님 환영합니다";
+
+							memberDiv.style["display"] = "none";
+							loginInfo.style["display"] = "block";
+ 						} else {
+ 							memberDiv.style["display"] = "block";
+							loginInfo.style["display"] = "none";
+						}
+					</script>
+				</div>
 			<div id="main_information_div">
 				<div id="main_map_div">
 
@@ -89,7 +200,7 @@
 						</div>
 						<div id="comment" class="main_container_title_parent">
 							<div id="comment_title" class="main_container_title_div">
-								<p class="main_container_title_p">한줄평</p>				
+								<p class="main_container_title_p">한줄평</p>
 							</div>
 							<div class="main_container_content_div">
 								<p class="main_container_content_p">세종대학교의 메인음식 오믈렛! 소시지까지 같이있어서 맛있게 먹을 수 있어요 :) </p>
@@ -105,13 +216,13 @@
 						</div>
 						<div class="main_introduce_image_card_div">
 							<img src="sausageOmelet_2.jpg">
-						</div>	
+						</div>
 						<div class="main_introduce_image_card_div">
 							<img src="sausageOmelet_3.jpg">
-						</div>	
+						</div>
 						<div class="main_introduce_image_card_div">
 							<img src="sausageOmelet_4.jpg">
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
@@ -144,7 +255,7 @@
 			    </div>
 
 	    		<div id="review_send_div">
-	    			<input class="review_send" type="submit" value="리뷰 올리기"/>	
+	    			<input class="review_send" type="submit" value="리뷰 올리기"/>
 	    		</div>
 
 

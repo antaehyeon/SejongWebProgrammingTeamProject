@@ -44,13 +44,19 @@ a {
 	margin-left: 30px;
 }
 
-#main_nav_member{
+#login_information {
+	display: none;
+}
+.main_nav {
 	margin-top: 35px;
 	vertical-align: middle;
 	float: left;
 	font-size: 15px;
 	color: white;
 	padding-left: 70px;
+}
+#main_nav_member > a {
+	text-decoration: none;
 }
 .image_down_arrow {
 	background-image: url('down-arrow.png');
@@ -79,7 +85,7 @@ a {
 /*상단 구성중 타이틀(학생회관) 텍스트 부분*/
 #main_text_title {
 	position: absolute;
-	left: 49%; top: 40%;
+	left: 48%; top: 20%;
 }
 #main_text_title > span {
 	font-weight: bold;
@@ -90,7 +96,7 @@ a {
 #main_hr {
 	position: absolute;
 	width: 85px;
-	left: 49%; top: 45%;
+	left: 48%; top: 24%;
 }
 #main_hr > hr {
 	height: 2px;
@@ -102,7 +108,7 @@ a {
 /*상단 구성중 내용 텍스트 부분*/
 #main_text_content {
 	position: absolute;
-	left: 33%; top: 50%;
+	left: 33%; top: 30%;
 }
 #main_text_content > span {
 	font-size: 22px;
